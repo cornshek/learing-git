@@ -1,24 +1,30 @@
 package charactor;
 import property.Item;
 
-public abstract class Hero {
+import java.io.Serializable;
+
+//Hero对象要保存在文件上，必需让Hero类实现Serializable接口
+public class Hero implements Serializable {
+    //serialVersionUID 表示这个类当前的版本，有了变化应该修改这个版本号
+    private static final long serialVersionUID = 1L;
     private String name;
     private float hp;
     private float armor;
     private int moveSpeed;
 
     public Hero() {
-//        System.out.println("Hero 的无参构造方法");
-    }
-
-    public Hero(String name) {
-//        System.out.println("Hero 有一个参数的构造方法");
-        this.name = name;
     }
 
     public Hero(String name, float hp) {
         this.name = name;
         this.hp = hp;
+    }
+
+    public Hero(String name, float hp, float armor, int moveSpeed) {
+        this.name = name;
+        this.hp = hp;
+        this.armor = armor;
+        this.moveSpeed = moveSpeed;
     }
 
     public String getName() {
@@ -53,11 +59,11 @@ public abstract class Hero {
         this.moveSpeed = moveSpeed;
     }
 
-    public static void battleWin(){
-        System.out.println("hero battle win");
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "name='" + name + '\'' +
+                ", hp=" + hp +
+                '}';
     }
-
-    //抽象类方法attack
-    //Hero的子类会被要求实现attack方法
-    public abstract void attack();
 }
