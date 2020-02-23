@@ -1,5 +1,7 @@
 import charactor.Hero;
 import io.ArrayObjectStream;
+import io.AutoCreate;
+import io.CharStream;
 import io.ObjectStream;
 
 import java.io.*;
@@ -9,10 +11,6 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        while (true) {
-            String line = s.nextLine();
-            System.out.println(line);
-        }
+        AutoCreate.run();
     }
 }
