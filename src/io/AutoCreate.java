@@ -29,6 +29,7 @@ public class AutoCreate {
 
         //从控制台获取所需参数
         //我要试试添加提交信息
+        //我再试试提交信息
         System.out.println("请输入类的名称");
         String classname = s.nextLine();
         System.out.println("请输入属性的类型");
