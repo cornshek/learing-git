@@ -15,6 +15,10 @@ public class Hero implements Serializable {
     public Hero() {
     }
 
+    public Hero(String name) {
+        this.name = name;
+    }
+
     public Hero(String name, float hp) {
         this.name = name;
         this.hp = hp;
@@ -64,6 +68,8 @@ public class Hero implements Serializable {
         return "Hero{" +
                 "name='" + name + '\'' +
                 ", hp=" + hp +
+                ", armor=" + armor +
+                ", moveSpeed=" + moveSpeed +
                 '}';
     }
 }
