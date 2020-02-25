@@ -15,6 +15,13 @@ public class Hero implements Serializable {
     public Hero() {
     }
 
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public Hero(String name) {
         this.name = name;
     }
@@ -63,13 +70,4 @@ public class Hero implements Serializable {
         this.moveSpeed = moveSpeed;
     }
 
-    @Override
-    public String toString() {
-        return "Hero{" +
-                "name='" + name + '\'' +
-                ", hp=" + hp +
-                ", armor=" + armor +
-                ", moveSpeed=" + moveSpeed +
-                '}';
-    }
 }
