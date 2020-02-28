@@ -11,7 +11,7 @@ import java.util.LinkedList;
         双向链表 Deque  
         队列 queue    常用方法：offer peek poll
  */
-public class LeranLinkedList {
+public class LearnLinkedList {
     public static void testLinkedList() {
         LinkedList<Hero> ll = new LinkedList<>();
         ll.addLast(new Hero("1"));
