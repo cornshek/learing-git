@@ -19,6 +19,7 @@ public class Hero implements Serializable {
     public String toString() {
         return "Hero{" +
                 "name='" + name + '\'' +
+                ", hp=" + hp +
                 '}';
     }
 
