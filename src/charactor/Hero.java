@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class Hero implements Serializable, Comparable<Hero> {
     //serialVersionUID 表示这个类当前的版本，有了变化应该修改这个版本号
     private static final long serialVersionUID = 1L;
+    private int id;
     private String name;
     private float hp;
     private float armor;
@@ -26,8 +27,8 @@ public class Hero implements Serializable, Comparable<Hero> {
     @Override
     public String toString() {
         return "Hero{" +
-                "hp=" + hp +
-                ", armor=" + armor +
+                "name='" + name + '\'' +
+                ", hp=" + hp +
                 '}';
     }
 
@@ -50,6 +51,14 @@ public class Hero implements Serializable, Comparable<Hero> {
         this.hp = hp;
         this.armor = armor;
         this.moveSpeed = moveSpeed;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
